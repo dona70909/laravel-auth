@@ -78,7 +78,7 @@
         
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                        </form>
+                        </form> 
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
