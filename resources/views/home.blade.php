@@ -10,8 +10,6 @@
         <div class="col-md-8">
             <div class="card">
 
-                {{-- Route to see all the posts  --}}
-                <a href="{{route('posts.index')}}">Index</a>
 
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 <div class="card-body">
@@ -22,6 +20,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                </div>
+
+                <div class="p-2">
+                    {{-- Route to see all the posts  --}}
+                    <a class="btn btn-primary" href="{{route('posts.index')}}"> Show all your posts </a>
                 </div>
             </div>
         </div>
