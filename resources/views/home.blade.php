@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('header-content')
+    @include('partials.header.header_nav')
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
