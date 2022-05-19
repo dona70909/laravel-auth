@@ -38,7 +38,31 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /* First i get the request */
+        $data = $request->all();
+
+        /* check the request values from the input */
+        $request->validate(
+            [
+                'post_title' => "required|min:5",
+                'post_text' => "required|min:3|max:50000",
+            ],
+
+            [
+                "required" => "Not valid :attribute.",
+            ]
+        );
+
+        /* create a new instance of Post with the value obtained from the form */
+
+        $post = new Post();
+        $post->post_title = $data['post_title'];
+        $post->post_text = $data['post_text'];
+        $post->post_img = $data['post_title'];
+        $post->save();
+
+        /* redirect to the show of the new Post update */
+        return redirect()->route('admin.show',$post);
     }
 
     /**
