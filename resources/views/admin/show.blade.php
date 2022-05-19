@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+{{-- modificare con slug --}}
+@section('title','Post')
+
 @section('header-content')
     @include('partials.header.header_nav')
 @endsection

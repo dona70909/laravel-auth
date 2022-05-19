@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title','Form-Create')
+
 @section('header-content')
     @include('partials.header.header_nav')
 @endsection

@@ -4,7 +4,8 @@
             <ul class="d-flex list-unstyled align-items-baseline py-2">
                 <li class="nav-item">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{-- config name --}}
+                        {{ config('app.name', 'Boolblog') }} <em>(@yield('title'))</em>
                     </a>
                 </li>
                 
