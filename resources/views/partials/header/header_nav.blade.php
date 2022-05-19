@@ -13,6 +13,7 @@
                     {{--  <ul class="navbar-nav mr-auto">
                     </ul>
                     --}}
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav d-flex ml-auto">
                         <!-- Authentication Links -->
@@ -27,14 +28,15 @@
                             @endif
                             @else
                             <li class="nav-item d-flex">
-                                {{-- nav-item dropdown nav-link dropdown-toggle --}}
+                                {{-- %class for toggle-- nav-item dropdown nav-link dropdown-toggle --}}
                                 <a id="navbarDropdown" class="mx-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
+                                {{-- # link to the form create --}}
+                                <a href="{{route('posts.create')}}">Insert new Post</a>
+
                                 <div  aria-labelledby="navbarDropdown">
-                                    {{-- class="dropdown-menu dropdown-menu-right"  dropdown-item--}}
-                                    
                                     <a class="ms-2" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">

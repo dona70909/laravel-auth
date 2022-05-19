@@ -11256,3 +11256,10 @@ a {
 main .wrapper-posts {
   gap: 1rem;
 }
+
+main .form-group {
+  margin-bottom: 1rem;
+}
+main .form-group input {
+  margin-bottom: 1rem;
+}
