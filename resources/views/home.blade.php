@@ -10,6 +10,9 @@
         <div class="col-md-8">
             <div class="card">
 
+                {{-- Route to see all the posts  --}}
+                <a href="{{route('posts.index')}}">Index</a>
+
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 <div class="card-body">
                     @if (session('status'))
