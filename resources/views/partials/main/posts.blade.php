@@ -1,12 +1,16 @@
 <section class="container-fluid">
-    <div class="row d-flex wrapper-posts p-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">More info</a>
+    <div class="row d-flex justify-content-center wrapper-posts">
+        @foreach ($posts as $post)
+            <div class="card col-3 py-3">
+                <img class="card-img-top img-fluid" src="{{$post->post_img}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$post->post_title}}</h5>
+                    <p class="card-text">
+                        {{$post->post_text}}
+                    </p>
+                    <a href="{{route('posts.show',$post)}}" class="btn btn-primary">More info</a>
+                </div>
             </div>
-        </div>
+        @endforeach
     </div>
 </section>
