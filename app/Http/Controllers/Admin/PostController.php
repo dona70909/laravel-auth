@@ -78,24 +78,49 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Post $post
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+        return view('admin.edit',compact('post'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+         /* First i get the request */
+            $data = $request->all();
+
+            /* check the request values from the input */
+            $request->validate(
+                [
+                    'post_title' => "required|min:5",
+                    'post_text' => "required|min:3|max:50000",
+                ],
+    
+                [
+                    "required" => "Not valid :attribute.",
+                ]
+            );
+    
+            /* create a new instance of Post with the value obtained from the form */
+    
+            $post = new Post();
+            $post->post_title = $data['post_title'];
+            $post->post_text = $data['post_text'];
+            $post->post_img = $data['post_title'];
+            $post->save();
+    
+            /* redirect to the show of the new Post update */
+            return redirect()->route('admin.show',$post)
+            ->with("message","Success");
     }
 
     /**

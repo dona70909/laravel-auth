@@ -33,7 +33,8 @@
                             <div class="buttons">
                                 @if (Route::has('login'))
                                     @auth
-                                    <a class="btn btn-primary" href="{{ route('home') }}">Home</a>
+                                    {{-- change instead of route to the home --}}
+                                    <a class="btn btn-primary" href="{{ route('posts.index') }}">Explore your Posts</a>
                                     <a  class="nav-link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">

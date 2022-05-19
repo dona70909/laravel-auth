@@ -8,7 +8,7 @@
                 <p class="card-text">
                     {{$post->post_text}}
                 </p>
-                {{-- <a href="#" class="btn btn-primary">More info</a> --}}
+                <a href="{{route('posts.edit',$post)}}" class="btn btn-primary">Edit </a>
             </div>
         </div>
     </div>

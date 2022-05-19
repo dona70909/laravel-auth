@@ -11249,7 +11249,11 @@ textarea.form-control-lg {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: black !important;
+}
+
+a:hover {
+  color: black !important;
 }
 
 /* POSTS */
