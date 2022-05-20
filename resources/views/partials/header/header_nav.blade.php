@@ -23,7 +23,7 @@
                     <li class="nav-item">
                         {{-- %class for toggle-- nav-item dropdown nav-link dropdown-toggle --}}
                         <a id="navbarDropdown" class="mx-2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            Welcome  {{ Auth::user()->name }}
                         </a>
                     </li>
                     <li class="nav-item">
