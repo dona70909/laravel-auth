@@ -18,10 +18,12 @@ class RouteServiceProvider extends ServiceProvider
 
     /**
      * The path to the "home" route for your application.
-     *
-     * @var string
+     * Instead of displaying the page (home.blade.php) -- /admin#
+     * HOME URI OF THE PAGE THAT I WANT TO SHOW AFTER LOGIN
+     * THIS PUBLIC CONST IT'S USED IN Auth\Login wich is the controller of the login
+     * @var string 
      */
-    public const HOME = '/admin#';
+    public const HOME = '/admin/posts';
 
     /**
      * Define your route model bindings, pattern filters, etc.
