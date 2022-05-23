@@ -110,17 +110,15 @@ class PostController extends Controller
                 ]
             );
     
-            /* create a new instance of Post with the value obtained from the form */
-    
-            $post = new Post();
+
             $post->post_title = $data['post_title'];
             $post->post_text = $data['post_text'];
             $post->post_img = $data['post_title'];
-            $post->save();
+            $post->update();
     
             /* redirect to the show of the new Post update */
-            return redirect()->route('admin.show',$post)
-            ->with("message","Success");
+            return redirect()->route('posts.show',compact('post'))
+            ->with("message", "Post " . $post->post_title ." edited with success");
     }
 
     /**
@@ -133,6 +131,6 @@ class PostController extends Controller
     {
         $post->delete();
         return redirect()->route('posts.index')
-        ->with('deleted-message', "$post->post_title è stato eliminato con successo.");
+        ->with('deleted-message', "The " . $post->post_title . " post has been deleted.");
     }
 }

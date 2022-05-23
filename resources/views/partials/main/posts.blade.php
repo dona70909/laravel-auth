@@ -1,5 +1,12 @@
 <section class="container-fluid">
     <div class="row d-flex justify-content-center wrapper-posts">
+        <div class="col-12">
+            @if(session('deleted-message'))
+                <div class="alert alert-danger">
+                    {{session('deleted-message')}}
+                </div>
+            @endif
+        </div>
         @foreach ($posts as $post)
             <div class="card col-3">
                 <img class="card-img-top img-fluid py-2" src="{{$post->post_img}}" alt="This image should respresent:  {{$post->post_title}}">

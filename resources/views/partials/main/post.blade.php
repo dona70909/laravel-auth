@@ -1,5 +1,12 @@
 <section class="container-fluid">
     <div class="row justify-content-center p-2">
+        <div class="col-12">
+            @if(session('message'))
+                <div class="alert alert-success">
+                    {{session('message')}}
+                </div>
+            @endif
+        </div>
         <div class="col-8">
             <img class="card-img-top img-fluid" src="{{$post->post_img}}" alt="Card image cap">
             <div class="card-body">
