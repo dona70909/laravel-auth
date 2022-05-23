@@ -30,7 +30,7 @@
     </div>
 </section>
 
-<script>
+<script defer>
     const deleteForms = document.querySelectorAll('.post-destroyer');
     deleteForms.forEach(singleForm => {
         singleForm.addEventListener('submit', function (event) {

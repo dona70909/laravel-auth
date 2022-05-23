@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     {{-- js --}}
-    <script src="{{ asset('js/app.js') }}">
+    {{--  <script src="{{ asset('js/app.js') }}"> --}}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 
